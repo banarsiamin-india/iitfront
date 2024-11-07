@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { addRole, updateRole } from '../api/roleApi';
 
-const models = ['projects','users', 'roles', 'tasks', 'comments','settings']; // List of models
+const models = ['projects','users', 'roles', 'tasks', 'comments','settings','skills']; // List of models
 const actions = ['read', 'add', 'edit', 'delete']; // List of actions
 
 const AddEditRoleForm = ({ role, onRoleSaved, onClose }) => {

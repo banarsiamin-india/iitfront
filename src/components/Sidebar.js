@@ -37,6 +37,14 @@ const Sidebar = () => {
             <Nav.Link as={Link} to="/users" className="text-white">Users</Nav.Link>
           </Nav.Item>
         )}
+        
+        {hasPermission('skills', 'read') && (
+
+        <Nav.Item>
+            <Nav.Link as={Link} to="/skills" className="text-white">Skills</Nav.Link>
+          </Nav.Item>
+        )}
+
         {hasPermission('roles', 'read') && (
           <Nav.Item>
             <Nav.Link as={Link} to="/roles" className="text-white">Roles</Nav.Link>
