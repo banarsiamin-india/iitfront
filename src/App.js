@@ -10,10 +10,14 @@ import ResetPassword from './components/ResetPassword';
 import Profile from './components/Profile';
 import ProfileUpdate from './components/ProfileUpdate';
 import ProjectList from './components/ProjectList';
+import TaskList from './components/TaskList';
+
 import RoleManagement from './components/RoleManagement';
 import SkillManagement from './components/SkillManagement';
 import AdminLayout from './components/AdminLayout';
 import Dashboard from './pages/Dashboard';
+import Settings from './pages/Settings';
+
 import PrivateRoute from './components/PrivateRoute';
 import UserManagement from'./components/UserManagement';
 
@@ -46,9 +50,10 @@ const App = () => {
               <Route path="/users" element={<UserManagement />} />
               <Route path="/profile/update" element={<ProfileUpdate />} />
               <Route path="/projects" element={<ProjectList />} />
+              <Route path="/tasks" element={<TaskList />} />
               <Route path="/roles" element={<RoleManagement />} />
               <Route path="/skills" element={<SkillManagement />} />
-              <Route path="/settings" element={<Dashboard />} />
+              <Route path="/settings" element={<Settings />} />
             </Route>
           </Route>
         </Routes>
