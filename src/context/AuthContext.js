@@ -1,9 +1,7 @@
 // src/context/AuthContext.js
 import React, { createContext, useReducer, useEffect } from 'react';
-
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
 const AuthContext = createContext();
 
 const authReducer = (state, action) => {
@@ -23,33 +21,20 @@ const authReducer = (state, action) => {
 
 const AuthProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, { user: null, error: null, success: null });
-  // const [state, dispatch] = useReducer(authReducer, { user: null, error: null });
   // const [state, dispatch] = useReducer(authReducer, initialState);
-  // const [state, dispatch] = useReducer(authReducer, { user: null });
   const navigate = useNavigate();
-
-  // const navigate = useNavigate();
 
   // Inside the AuthProvider
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
-    
     if (user) {
       dispatch({ type: 'LOGIN', payload: user });
     }
   }, []);
 
-
-  // const login = async (email, password) => {
-  //   const { data } = await axios.post(`${process.env.REACT_APP_API_URL}api/users/login`, { email, password });
-  //   localStorage.setItem('user', JSON.stringify(data));
-  //   dispatch({ type: 'LOGIN', payload: data });
-  //   navigate('/profile');
-  // };
   const login = async (email, password) => {
     try {
       const { data } = await axios.post(`${process.env.REACT_APP_API_URL}api/users/login`, { email, password });
-
       console.log('login api',data);
       localStorage.setItem('user', JSON.stringify(data));
       dispatch({ type: 'LOGIN', payload: data });
@@ -81,18 +66,9 @@ const AuthProvider = ({ children }) => {
   const forgetPwd = async (email) => {
     try {
       const { data } = await axios.post(`${process.env.REACT_APP_API_URL}api/users/forgetPassword`, { email });
-      
-      console.log('Forget Password API response:', data);
-
-      // Optional: Show a success notification or alert to the user
       dispatch({ type: 'SET_SUCCESS', payload: data?.message ||'Password reset link sent to your email.' });
-      // dispatch({ type: 'SET_SUCCESS', payload: data.message?.data?.message ||'Password reset link sent to your email.' });
-
     } catch (error) {
-      dispatch({
-        type: 'SET_ERROR',
-        payload: error.response?.data?.message || 'Failed to send reset link. Please try again.',
-      });
+      dispatch({ type: 'SET_ERROR',payload: error.response?.data?.message || 'Failed to send reset link. Please try again.',});
     }
   };
 
@@ -100,9 +76,9 @@ const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider
     value={{
-      user_role: state.user?.user_role, // Access token directly from the user object
-      user_permissions: state.user?.user_permissions,
-      user_skills: state.user?.user_skills, // Access token directly from the user object
+      user_role: state.user?.user_role, // Access Role directly from the user object
+      user_permissions: state.user?.user_permissions,// Access Permissions directly from the user object
+      user_skills: state.user?.user_skills, // Access Skills directly from the user object
       token: state.user?.token, // Access token directly from the user object
       user: state.user,
       error: state.error,

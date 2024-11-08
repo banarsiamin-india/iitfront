@@ -7,6 +7,7 @@ const AddProjectForm = ({ onProjectAdded }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [status, setStatus] = useState('pending');
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,12 +20,16 @@ const AddProjectForm = ({ onProjectAdded }) => {
       setStatus('pending');
     } catch (error) {
       console.error(error);
-      alert('Failed to add project.');
+      setError(error.response?.data?.message);
+
+
+      // alert('Failed to add project.');
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      {error && <div className="alert alert-danger">{error}</div>}
       <div className="mb-3">
         <label className="form-label">Title</label>
         <input

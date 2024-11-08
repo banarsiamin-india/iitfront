@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { updateProject } from '../api/projectApi';
 
@@ -7,6 +7,7 @@ const EditProjectForm = ({ project, onProjectUpdated }) => {
   const [title, setTitle] = useState(project.title);
   const [description, setDescription] = useState(project.description);
   const [status, setStatus] = useState(project.status);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,12 +17,15 @@ const EditProjectForm = ({ project, onProjectUpdated }) => {
       onProjectUpdated(updatedProject); // Notify parent component
     } catch (error) {
       console.error(error);
-      alert('Failed to update project.');
+      // alert('Failed to update project.');
+      setError(error.response?.data?.message);
+
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      {error && <div className="alert alert-danger">{error}</div>}
       <div className="mb-3">
         <label className="form-label">Title</label>
         <input

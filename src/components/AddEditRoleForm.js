@@ -2,12 +2,13 @@ import React, { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { addRole, updateRole } from '../api/roleApi';
 
-const models = ['projects','users', 'roles', 'tasks', 'comments','settings','skills']; // List of models
+const models = ['projects','tasks', 'comments', 'users', 'roles','skills','reports','settings']; // List of models
 const actions = ['read', 'add', 'edit', 'delete']; // List of actions
 
 const AddEditRoleForm = ({ role, onRoleSaved, onClose }) => {
   const { user } = useContext(AuthContext);
   const [name, setName] = useState('');
+  const [error, setError] = useState('');
   const [permissions, setPermissions] = useState({});
 
   useEffect(() => {
@@ -55,13 +56,16 @@ const AddEditRoleForm = ({ role, onRoleSaved, onClose }) => {
       onClose();
     } catch (error) {
       console.error(error);
-      alert(`Failed to ${role ? 'update' : 'add'} role.`);
+      setError(error.response?.data?.message);
+      // alert(`Failed to ${role ? 'update' : 'add'} role.`);
     }
   };
-  const noteditable = ['admin', 'Admin', 'developer', 'Developer', 'Project Managers', 'Client', 'User', 'user'];
+  const noteditable = ['Admin', 'Developer', 'Project Managers', 'Client', 'User'];
 
   return (
     <form onSubmit={handleSubmit}>
+        {error && <div className="alert alert-danger">{error}</div>}
+
       <div className="mb-3">
         <label className="form-label">Name</label>
         

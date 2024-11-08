@@ -1,14 +1,15 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { addSkill, updateSkill } from '../api/skillApi';
 
 const SkillForm = ({ skill, onSuccess, onCancel }) => {
   const { user } = useContext(AuthContext);
   const [name, setName] = useState(skill ? skill.name : '');
+  const [error, setError] = useState('');
 
   // Set form title and function for API call based on mode
   const isEditMode = Boolean(skill);
-  const formTitle = isEditMode ? 'Edit Skill' : 'Add Skill';
+  // const formTitle = isEditMode ? 'Edit Skill' : 'Add Skill';
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,12 +22,15 @@ const SkillForm = ({ skill, onSuccess, onCancel }) => {
       setName('');
     } catch (error) {
       console.error(error);
-      alert(`Failed to ${isEditMode ? 'update' : 'add'} skill.`);
+      // alert(`Failed to ${isEditMode ? 'update' : 'add'} skill.`);
+      setError(error.response?.data?.message);
+
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
+       {error && <div className="alert alert-danger">{error}</div>}
       <div className="mb-3">
         <label className="form-label">Name</label>
         <input
