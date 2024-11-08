@@ -12,6 +12,7 @@ const UserManagement = () => {
   const [editingUser, setEditingUser] = useState(null);
   const [showModal, setShowModal] = useState(false);
   // const [roles, setRoles] = useState([]);
+  const[erroru,setErroru]=useState('');
 
    useEffect(() => {
     if (user) {
@@ -21,6 +22,8 @@ const UserManagement = () => {
           setUsers(data);
         } catch (error) {
           console.error('Error fetching users:', error);
+          setErroru(error.response?.data?.message || 'Error fetching users');
+
         }
       };
       loadUsers();
@@ -34,6 +37,8 @@ const UserManagement = () => {
         setUsers(users.filter((u) => u._id !== id));
       } catch (error) {
         console.error('Error deleting user:', error);
+        setErroru(error.response?.data?.message || 'Error deleting user');
+
       }
     }
   };
@@ -45,6 +50,7 @@ const UserManagement = () => {
     } else {
       setUsers([...users, savedUser]);
     }
+    
     setShowModal(false);
   };
 
@@ -54,6 +60,7 @@ const UserManagement = () => {
       <button className="btn btn-primary mb-3" onClick={() => setShowModal(true)}>
         Add User
       </button>
+      {erroru && <div className="alert alert-danger">{erroru}</div>}
 
       <table className="table table-striped table-hover mt-3 ">
         <thead className="table-dark">

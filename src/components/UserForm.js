@@ -7,6 +7,7 @@ const UserForm = ({ user, onUserSaved, onClose }) => {
   const { token } = useContext(AuthContext);
   const [form, setForm] = useState({ name: '', email: '', phone: '', password: '', roles: '' });
   const [roles, setRoles] = useState([]);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const fetchRoles = async () => {
@@ -50,7 +51,8 @@ const UserForm = ({ user, onUserSaved, onClose }) => {
       setForm({ name: '', email: '', phone: '', password: '', roles: '' });
     } catch (error) {
       console.error(error);
-      alert('Failed to save user.');
+      setError(error.response?.data?.message || 'Failed to save user');
+      // alert('Failed to save user.');
     }
   };
 
@@ -120,6 +122,7 @@ const UserForm = ({ user, onUserSaved, onClose }) => {
       <button type="submit" className="btn btn-primary">
         {user ? 'Save Changes' : 'Add User'}
       </button>
+      {error && <div className="alert alert-danger">{error}</div>}
     </form>
   );
 };

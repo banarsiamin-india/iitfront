@@ -7,7 +7,7 @@ const ProjectForm = ({ project, onSave, onClose }) => {
   const { user } = useContext(AuthContext);
   const [title, setTitle] = useState(project?.title || '');
   const [description, setDescription] = useState(project?.description || '');
-  const [status, setStatus] = useState(project?.status || 'pending');
+  const [status, setStatus] = useState(project?.status || 'Pending');
   const [error, setError] = useState('');
 
   useEffect(() => {
