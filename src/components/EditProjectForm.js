@@ -7,6 +7,8 @@ const EditProjectForm = ({ project, onProjectUpdated }) => {
   const [title, setTitle] = useState(project.title);
   const [description, setDescription] = useState(project.description);
   const [status, setStatus] = useState(project.status);
+  // const [usersassigne, setUsersassigne] = useState(project.users_assigne);
+  
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
@@ -57,6 +59,18 @@ const EditProjectForm = ({ project, onProjectUpdated }) => {
           <option value="completed">Completed</option>
         </select>
       </div>
+      {/* <div className="mb-3">
+        <label className="form-label">Assigne user</label>
+        <select
+          className="form-control"
+          value={usersassigne}
+          onChange={(e) => setUsersassigne(e.target.value)}
+        >
+          <option value="1">Abcd</option>
+          <option value="2">Ramu</option>
+          <option value="3">Rahi</option>
+        </select>
+      </div> */}
       <button type="submit" className="btn btn-primary">Update Project</button>
     </form>
   );
