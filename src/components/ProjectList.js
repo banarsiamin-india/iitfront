@@ -1,15 +1,14 @@
+// ProjectList.js
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { getProjects, deleteProject } from '../api/projectApi';
-import AddProjectForm from './AddProjectForm';
-import EditProjectForm from './EditProjectForm';
+import ProjectForm from './ProjectForm';
 
 const ProjectList = () => {
   const { user } = useContext(AuthContext);
   const [projects, setProjects] = useState([]);
-  const [editingProject, setEditingProject] = useState(null);
-  const [showAddModal, setShowAddModal] = useState(false);
-  const [showEditModal, setShowEditModal] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (user && user.token) {
@@ -25,10 +24,9 @@ const ProjectList = () => {
     }
   }, [user]);
 
-
   const handleDelete = async (id) => {
     if (user && user.token) {
-      if (window.confirm('Are you sure you want to delete this project0?'+id)) {
+      if (window.confirm('Are you sure you want to delete this project?')) {
         try {
           await deleteProject(id, user.token);
           setProjects(projects.filter((project) => project._id !== id));
@@ -38,22 +36,29 @@ const ProjectList = () => {
         }
       }
     }
-
-  };
-  
-  const handleProjectAdded = (project) => {
-    setProjects([...projects, project]);
-    setShowAddModal(false); // Close modal on successful add
   };
 
-  const handleProjectUpdated = (updatedProject) => {
-    setProjects(
-      projects.map((project) =>
-        project._id === updatedProject._id ? updatedProject : project
-      )
-    );
-    setEditingProject(null);
-    setShowEditModal(false); // Close modal on successful edit
+  const handleSaveProject = (savedProject) => {
+    if (currentProject) {
+      setProjects(
+        projects.map((project) => 
+          project._id === savedProject._id ? savedProject : project
+        )
+      );
+    } else {
+      setProjects([...projects, savedProject]);
+    }
+    setShowModal(false);
+  };
+
+  const openAddModal = () => {
+    setCurrentProject(null);
+    setShowModal(true);
+  };
+
+  const openEditModal = (project) => {
+    setCurrentProject(project);
+    setShowModal(true);
   };
 
   if (!user || !user.token) {
@@ -63,7 +68,7 @@ const ProjectList = () => {
   return (
     <div>
       <h2>Projects</h2>
-      <button className="btn btn-primary mb-3" onClick={() => setShowAddModal(true)}>
+      <button className="btn btn-primary mb-3" onClick={openAddModal}>
         Add Project
       </button>
 
@@ -84,10 +89,7 @@ const ProjectList = () => {
               <td>{project.status}</td>
               <td>
                 <button
-                  onClick={() => {
-                    setEditingProject(project);
-                    setShowEditModal(true);
-                  }}
+                  onClick={() => openEditModal(project)}
                   className="btn btn-secondary btn-sm me-2"
                 >
                   Edit
@@ -104,47 +106,25 @@ const ProjectList = () => {
         </tbody>
       </table>
 
-      {/* Add Project Modal */}
-      {showAddModal && (
+      {/* Project Modal */}
+      {showModal && (
         <div className="modal show d-block" tabIndex="-1" style={{ background: '#000000a6' }}>
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title">Add Project</h5>
+                <h5 className="modal-title">{currentProject ? 'Edit Project' : 'Add Project'}</h5>
                 <button
                   type="button"
                   className="btn-close"
-                  onClick={() => setShowAddModal(false)}
+                  onClick={() => setShowModal(false)}
                 ></button>
               </div>
               <div className="modal-body">
-                <AddProjectForm onProjectAdded={handleProjectAdded} />
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Edit Project Modal */}
-      {showEditModal && (
-        <div className="modal show d-block" tabIndex="-1" style={{ background: '#000000a6' }}>
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title">Edit Project</h5>
-                <button
-                  type="button"
-                  className="btn-close"
-                  onClick={() => setShowEditModal(false)}
-                ></button>
-              </div>
-              <div className="modal-body">
-                {editingProject && (
-                  <EditProjectForm
-                    project={editingProject}
-                    onProjectUpdated={handleProjectUpdated}
-                  />
-                )}
+                <ProjectForm
+                  project={currentProject}
+                  onSave={handleSaveProject}
+                  onClose={() => setShowModal(false)}
+                />
               </div>
             </div>
           </div>
