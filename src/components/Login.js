@@ -27,7 +27,7 @@ const Login = () => {
   return (
     <div className="row justify-content-md-center">
       <div className="col-md-6">
-        <h2>Login form</h2>
+        <h2>Login form!</h2>
         {error && <div className="alert alert-danger">{error}</div>} {/* Display error message */}
 
         <form onSubmit={submitHandler}>
