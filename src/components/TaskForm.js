@@ -1,163 +1,163 @@
-// src/components/TaskForm.js
-import React, { useState, useContext, useEffect } from 'react';
-import { AuthContext } from '../context/AuthContext';
-import { addTask, updateTask } from '../api/taskApi'; // Update with the correct path
-import { getProjects } from '../api/projectApi'; // Assuming you have a function to fetch projects
+import React, { useState, useEffect } from 'react';
+import { addTask, updateTask } from '../api/taskApi';
 
-const TaskForm = ({ task, onSave, onClose }) => {
-  const { user, user_permissions } = useContext(AuthContext);
-  const [title, setTitle] = useState(task?.title || '');
-  const [description, setDescription] = useState(task?.description || '');
-  const [status, setStatus] = useState(task?.status || 'Pending');
-  const [priority, setPriority] = useState(task?.priority || 'Low');
-  const [projectId, setProjectId] = useState(task?.project_id || '');
-  const [assignedUserId, setAssignedUserId] = useState(task?.user || '');
+const TaskForm = ({ currentTask, onClose, refreshTasks, projects, users, token }) => {
+  const [taskData, setTaskData] = useState({
+    title: '',
+    description: '',
+    status: '',
+    priority: '',
+    project_id: '',
+    assignedusers: [], // Array for multiple users
+  });
   const [error, setError] = useState('');
-  const [projects, setProjects] = useState([]);
-  const [users, setUsers] = useState([]); // Assuming user options can be fetched
-
-  const hasPermission = (action) => {
-    return user_permissions?.['task']?.includes(action);
-  };
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const projectData = await getProjects(user.token);
-        setProjects(projectData);
-      } catch (err) {
-        console.error('Failed to load projects:', err);
-      }
-    };
-    fetchProjects();
-    
-    if (task) {
-      setTitle(task.title);
-      setDescription(task.description);
-      setStatus(task.status);
-      setPriority(task.priority);
-      setProjectId(task.project_id);
-      setAssignedUserId(task.user);
+    if (currentTask) {
+      setTaskData({
+        title: currentTask.title || '',
+        description: currentTask.description || '',
+        status: currentTask.status || '',
+        priority: currentTask.priority || '',
+        project_id: currentTask.project_id || '',
+        assignedusers: currentTask.assignedusers || [], // Ensure array format
+      });
     }
-  }, [task, user.token]);
+  }, [currentTask]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
-
-    if (!hasPermission(task ? 'edit' : 'add')) {
-      setError('Permission denied');
-      return;
-    }
-
     try {
-      const taskData = { title, description, status, priority, project_id: projectId, user: assignedUserId };
-      if (task) {
-        const updatedTask = await updateTask(task._id, taskData, user.token);
-        onSave(updatedTask);
+      if (currentTask) {
+        await updateTask(currentTask._id, { ...taskData }, token);
       } else {
-        const newTask = await addTask(taskData, user.token);
-        onSave(newTask);
+        await addTask(taskData, token);
       }
+      refreshTasks();
       onClose();
     } catch (error) {
-      console.error(error);
-      setError(error.response?.data?.message || 'Failed to save task');
+      console.error('Error saving task:', error);
+      setError(error.response?.data?.message || 'Error saving task');
     }
   };
 
+  const handleUserChange = (e) => {
+    const selectedOptions = Array.from(e.target.selectedOptions, (option) => option.value);
+    setTaskData({ ...taskData, assignedusers: selectedOptions });
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-      {error && <div className="alert alert-danger">{error}</div>}
-      
-      <div className="mb-3">
-        <label className="form-label">Title</label>
-        <input
-          type="text"
-          className="form-control"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        />
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title">{currentTask ? 'Edit Task' : 'Add Task'}</h5>
+        <button type="button" className="btn-close" onClick={onClose}></button>
       </div>
+      <div className="modal-body">
+        <form onSubmit={handleSubmit}>
+          {error && <div className="alert alert-danger">{error}</div>}
 
-      <div className="mb-3">
-        <label className="form-label">Description</label>
-        <textarea
-          className="form-control"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          required
-        />
+          {/* Title */}
+          <div className="mb-3">
+            <label className="form-label">Title</label>
+            <input
+              type="text"
+              className="form-control"
+              value={taskData.title}
+              onChange={(e) => setTaskData({ ...taskData, title: e.target.value })}
+              required
+            />
+          </div>
+
+          {/* Description */}
+          <div className="mb-3">
+            <label className="form-label">Description</label>
+            <textarea
+              className="form-control"
+              value={taskData.description}
+              onChange={(e) => setTaskData({ ...taskData, description: e.target.value })}
+              required
+            ></textarea>
+          </div>
+
+          {/* Project Selection */}
+          <div className="mb-3">
+            <label className="form-label">Project</label>
+            <select
+              className="form-control"
+              value={taskData.project_id}
+              onChange={(e) => setTaskData({ ...taskData, project_id: e.target.value })}
+              required
+            >
+              <option value="">Select Project</option>
+              {projects.map((project) => (
+                <option key={project._id} value={project._id}>
+                  {project.title}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Assign Users (Multiple Selection) */}
+          <div className="mb-3">
+            <label className="form-label">Assign to Users</label>
+            <select
+              className="form-control"
+              multiple
+              value={taskData.assignedusers} // Bind to the assigned users array
+              onChange={handleUserChange}
+              required
+            >
+              {users.map((user) => (
+                <option key={user._id} value={user._id}>
+                  {user.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Status */}
+          <div className="mb-3">
+            <label className="form-label">Status</label>
+            <select
+              className="form-control"
+              value={taskData.status}
+              onChange={(e) => setTaskData({ ...taskData, status: e.target.value })}
+              required
+            >
+              <option value="">Select Status</option>
+              <option value="To Do">To Do</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Pending">Pending</option>
+              <option value="Overdue">Overdue</option>
+              <option value="Needs info">Needs info</option>
+              <option value="Completed">Completed</option>
+              <option value="In Review">In Review</option>
+            </select>
+          </div>
+
+          {/* Priority */}
+          <div className="mb-3">
+            <label className="form-label">Priority</label>
+            <select
+              className="form-control"
+              value={taskData.priority}
+              onChange={(e) => setTaskData({ ...taskData, priority: e.target.value })}
+              required
+            >
+              <option value="">Select priority</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+              <option value="Critical">Critical</option>
+            </select>
+          </div>
+
+          <button type="submit" className="btn btn-primary">
+            {currentTask ? 'Update Task' : 'Add Task'}
+          </button>
+        </form>
       </div>
-
-      <div className="mb-3">
-        <label className="form-label">Status</label>
-        <select
-          className="form-control"
-          value={status}
-          onChange={(e) => setStatus(e.target.value)}
-        >
-          <option value="Pending">Pending</option>
-          <option value="In Progress">In Progress</option>
-          <option value="Overdue">Overdue</option>
-          <option value="Needs info">Needs Info</option>
-          <option value="Completed">Completed</option>
-          <option value="In Review">In Review</option>
-        </select>
-      </div>
-
-      <div className="mb-3">
-        <label className="form-label">Priority</label>
-        <select
-          className="form-control"
-          value={priority}
-          onChange={(e) => setPriority(e.target.value)}
-        >
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
-          <option value="Critical">Critical</option>
-        </select>
-      </div>
-
-      <div className="mb-3">
-        <label className="form-label">Project</label>
-        <select
-          className="form-control"
-          value={projectId}
-          onChange={(e) => setProjectId(e.target.value)}
-          required
-        >
-          <option value="">Select Project</option>
-          {projects.map((project) => (
-            <option key={project._id} value={project._id}>
-              {project.title}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div className="mb-3">
-        <label className="form-label">Assigned User</label>
-        <select
-          className="form-control"
-          value={assignedUserId}
-          onChange={(e) => setAssignedUserId(e.target.value)}
-        >
-          <option value="">Select User</option>
-          {users.map((user) => (
-            <option key={user._id} value={user._id}>
-              {user.name}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <button type="submit" className="btn btn-primary">
-        {task ? 'Update Task' : 'Add Task'}
-      </button>
-    </form>
+    </div>
   );
 };
 

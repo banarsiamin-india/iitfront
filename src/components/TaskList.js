@@ -1,145 +1,161 @@
 // src/components/TaskList.js
-// import React, { useEffect, useState, useContext } from 'react';
-// import { AuthContext } from '../context/AuthContext';
-// import { getTasks, deleteTask } from '../api/taskApi'; // Adjust based on your API setup
-// import TaskForm from './TaskForm';
+import React, { useEffect, useState, useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
+import { getTasks, deleteTask } from '../api/taskApi';
+import { getProjects } from '../api/projectApi';
+import { fetchUsers } from '../api/userApi';
+import TaskForm from './TaskForm';
+import { Badge } from 'react-bootstrap';
 
 const TaskList = () => {
-  // const { user, user_permissions } = useContext(AuthContext);
-  // const [tasks, setTasks] = useState([]);
-  // const [currentTask, setCurrentTask] = useState(null);
-  // const [showModal, setShowModal] = useState(false);
+  const { user,token } = useContext(AuthContext);
+  const [tasks, setTasks] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [selectedProject, setSelectedProject] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [currentTask, setCurrentTask] = useState(null);
 
-  // const hasPermission = (module, action) => {
-  //   return user_permissions?.[module]?.includes(action);
-  // };
+  const fetchTasks = async () => {
+    try {
+      const data = await getTasks(token, selectedProject);
+      setTasks(data);
+    } catch (error) {
+      console.error('Error fetching tasks:', error);
+    }
+  };
 
-  // useEffect(() => {
-  //   if (user && user.token) {
-  //     const fetchTasks = async () => {
-  //       try {
-  //         const data = await getTasks(user.token);
-  //         setTasks(data);
-  //       } catch (error) {
-  //         console.error('Error fetching tasks:', error);
-  //       }
-  //     };
-  //     fetchTasks();
-  //   }
-  // }, [user]);
+  
+  useEffect(() => {
+    const fetchProjectsAndUsers = async () => {
+      try {
+        const [projectData, userData] = await Promise.all([
+          getProjects(token),
+          fetchUsers(token),
+        ]);
+        setProjects(projectData);
+        setUsers(userData.data || userData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
-  // const handleDelete = async (id) => {
-  //   if (user && user.token && hasPermission('task', 'delete')) {
-  //     if (window.confirm('Are you sure you want to delete this task?')) {
-  //       try {
-  //         await deleteTask(id, user.token);
-  //         setTasks(tasks.filter((task) => task._id !== id));
-  //       } catch (error) {
-  //         console.error('Error deleting task:', error);
-  //         alert('Error deleting task');
-  //       }
-  //     }
-  //   }
-  // };
+    fetchProjectsAndUsers();
+    fetchTasks();
+  }, [user, selectedProject]);
 
-  // const handleSaveTask = (savedTask) => {
-  //   if (currentTask) {
-  //     setTasks(tasks.map((task) => (task._id === savedTask._id ? savedTask : task)));
-  //   } else {
-  //     setTasks([...tasks, savedTask]);
-  //   }
-  //   setShowModal(false);
-  // };
+  const handleProjectChange = (e) => setSelectedProject(e.target.value);
 
-  // const openAddModal = () => {
-  //   if (hasPermission('task', 'add')) {
-  //     setCurrentTask(null);
-  //     setShowModal(true);
-  //   } else {
-  //     alert('Permission denied');
-  //   }
-  // };
+  const handleAddTask = () => {
+    setCurrentTask(null);
+    setShowModal(true);
+  };
 
-  // const openEditModal = (task) => {
-  //   if (hasPermission('task', 'edit')) {
-  //     setCurrentTask(task);
-  //     setShowModal(true);
-  //   } else {
-  //     alert('Permission denied');
-  //   }
-  // };
+  const handleEditTask = (task) => {
+    setCurrentTask(task);
+    setShowModal(true);
+  };
 
-  // if (!user || !user.token) {
-  //   return <p>Please log in to view your tasks.</p>;
-  // }
+  const handleDeleteTask = async (taskId) => {
+    try {
+      await deleteTask(user.token, taskId);
+      fetchTasks();
+    } catch (error) {
+      console.error('Error deleting task:', error);
+    }
+  };
 
-  // return (
-  //   <div>
-  //     <h2>Tasks</h2>
-  //     {hasPermission('task', 'add') && (
-  //       <button className="btn btn-primary mb-3" onClick={openAddModal}>
-  //         Add Task
-  //       </button>
-  //     )}
-  //     <table className="table table-striped table-hover mt-3">
-  //       <thead className="table-dark">
-  //         <tr>
-  //           <th>Title</th>
-  //           <th>Description</th>
-  //           <th>Status</th>
-  //           <th>Priority</th>
-  //           <th>Actions</th>
-  //         </tr>
-  //       </thead>
-  //       <tbody>
-  //         {tasks.map((task) => (
-  //           <tr key={task._id}>
-  //             <td>{task.title}</td>
-  //             <td>{task.description}</td>
-  //             <td>{task.status}</td>
-  //             <td>{task.priority}</td>
-  //             <td>
-  //               {hasPermission('task', 'edit') && (
-  //                 <button onClick={() => openEditModal(task)} className="btn btn-secondary btn-sm me-2">
-  //                   Edit
-  //                 </button>
-  //               )}
-  //               {hasPermission('task', 'delete') && (
-  //                 <button onClick={() => handleDelete(task._id)} className="btn btn-danger btn-sm">
-  //                   Delete
-  //                 </button>
-  //               )}
-  //             </td>
-  //           </tr>
-  //         ))}
-  //       </tbody>
-  //     </table>
+  const closeModal = () => {
+    setShowModal(false);
+    setCurrentTask(null);
+  };
 
-  //     {showModal && (
-  //       <div className="modal show d-block" tabIndex="-1" style={{ background: '#000000a6' }}>
-  //         <div className="modal-dialog">
-  //           <div className="modal-content">
-  //             <div className="modal-header">
-  //               <h5 className="modal-title">{currentTask ? 'Edit Task' : 'Add Task'}</h5>
-  //               <button
-  //                 type="button"
-  //                 className="btn-close"
-  //                 onClick={() => setShowModal(false)}
-  //               ></button>
-  //             </div>
-  //             <div className="modal-body">
-  //               <TaskForm
-  //                 task={currentTask}
-  //                 onSave={handleSaveTask}
-  //                 onClose={() => setShowModal(false)}
-  //               />
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     )}
-  //   </div>
-  // );
+  return (
+    <div>
+      <h2>Tasks</h2>
+      <div className="mb-3">
+        <label className="form-label">Filter by Project</label>
+        <select
+          className="form-control"
+          value={selectedProject}
+          onChange={handleProjectChange}
+        >
+          <option value="">All Projects</option>
+          {projects.map((project) => (
+            <option key={project._id} value={project._id}>
+              {project.title}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <button className="btn btn-primary mb-3" onClick={handleAddTask}>
+        Add Task
+      </button>
+
+      <table className="table table-striped table-hover mt-3">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Assigned User</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tasks.map((task) => (
+            <tr key={task._id}>
+              <td>{task.title}</td>
+              <td>{task.description}</td>
+              <td>{task.assignedUser?.name || 'Unassigned'}
+                  {task?.assignedUser && task.assignedUser.length > 0 ? (
+                    task.assignedUser.map((user, index) => {
+                      const lastIndex = task.assignedUser.length - 1;
+                      return (
+                        <span key={user._id}>
+                          <Badge pill bg="info" text="dark">
+                            {user.name}
+                          </Badge>
+                          {index === lastIndex - 1 && task.assignedUser.length > 1 ? ' ' : index < lastIndex ? '  ' : ''}
+                        </span>
+                      );
+                    })
+                  ) : (
+                    'No assignedUser'
+                  )}
+              </td>
+              <td>
+                <button className="btn btn-warning" onClick={() => handleEditTask(task)}>
+                  Edit
+                </button>
+                <button className="btn btn-danger" onClick={() => handleDeleteTask(task._id)}>
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="modal fade show d-block" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <TaskForm
+                currentTask={currentTask}
+                onClose={closeModal}
+                refreshTasks={fetchTasks}
+                projects={projects}
+                users={users}
+                token={token}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default TaskList;
