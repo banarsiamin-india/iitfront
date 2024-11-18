@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileZilla3 version="3.67.1" platform="windows">
+	<Servers>
+		<Server>
+			<Host>i6s.bc6.myftpupload.com</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>v3ReIAlLLEo6xL</User>
+			<Pass encoding="base64">bEU2dkVyQD1tbWtxZ3E=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>Ashley exploredrinks | Rahul</Name>
+			<Comments>xTKo1ek4H=Un0u
+lE6vEr@=mmkqgq</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>49.12.33.216</Host>
+			<Port>1677</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>bv_sftp_user</User>
+			<Pass encoding="base64">OTMxNTk1NWFhYTRlOTZjNg==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>associationstudios429</Name>
+			<Comments>https://associationstudios429.e.wpstage.net/
+blogvault
+67ebfe59
+
+Admin
+guest114
+@fN7*Cc76!BX3fOHUdUm#lYH
+
+H: 49.12.33.216
+U: bv_sftp_user
+P: 9315955aaa4e96c6
+port: 1677</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ftp.belovedbumps.sg</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>webexpert987@belovedbumps.sg</User>
+			<Pass encoding="base64">Lk9FXUElNDdCOVhE</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>beloved1||NATASHA|Sudha</Name>
+			<Comments>FTP Username: webexpert987@belovedbumps.sg
+FTP server: ftp.belovedbumps.sg
+FTP &amp; explicit FTPS port:  21
+New FTP Password :- .OE]A%47B9XD
+</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ftp.belovedbumps.sg</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>staging@belovedbumps.sg</User>
+			<Pass encoding="base64">Lk9FXUElNDdCOVhE</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>belovedbumps.sg||NATASHA|SHUDHA</Name>
+			<Comments>FTP Username: staging@belovedbumps.sg
+FTP PWD : .OE]A%47B9XD
+
+FTP server: ftp.belovedbumps.sg
+FTP &amp; explicit FTPS port:  21
+
+https://belovedbumps.sg/wp-admin/
+tankianann
+Te5ting123!#?</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>sites01.sites.onyx.io</Host>
+			<Port>35607</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>webuser</User>
+			<Pass encoding="base64">S1NzSFFsbU8xbFNqa2w4Mmk4aG4=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>Ben Live</Name>
+			<Comments>Hostname:
+sites01.sites.onyx.io
+Port:
+35607
+Username:
+webuser
+Password:
+KSsHQlmO1lSjkl82i8hn</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>49.12.33.216</Host>
+			<Port>3241</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>bv_sftp_user</User>
+			<Pass encoding="base64">ZjA0Y2RmMTRiMmY2NzAwMg==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>blogvault rosa-sachin</Name>
+			<Comments>https://87-106-236-102-plesk453.e.wpstage.net/
+blogvault
+2636ea7f  
+
+Admin
+User: adtest
+Pass: TrEZrh%Jq@iY)*wSyf$3KuN
+
+SFTP DETAILS
+49.12.33.216
+bv_sftp_user
+f04cdf14b2f67002
+3241
+
+banibek985@chnlog.com (Staging)</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>35.204.143.60</Host>
+			<Port>13249</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>buzzanova</User>
+			<Pass encoding="base64">bXRFNnNVRVByZkNhNHRo</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>buzzanova.kinsta.cloud/wp-admin</Name>
+			<Comments>
+user: dev
+pw: swXn9Q*Uid6ib5A@zTx4GE$c
+https://buzzanova.kinsta.cloud/wp-admin
+SFTP access - 
+Host : 35.204.143.60
+User : buzzanova
+Password : mtE6sUEPrfCa4th
+Port : 13249</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>sftp.flywheelsites.com</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>boparker</User>
+			<Pass encoding="base64">SG9nZ2hvZ2czIQ==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>canteyhanger | BO | Kartik | hemlata</Name>
+			<Comments>
+https://canteyhanger.com/
+Login info: user: boparker / pass: (PjB6uLOsV&amp;paeGj6h7)3*)Y
+
+sftp.flywheelsites.com
+boparker
+Hogghogg3!</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>dertester.de</Host>
+			<Port>21</Port>
+			<Protocol>6</Protocol>
+			<Type>0</Type>
+			<User>f012353a</User>
+			<Pass encoding="base64">dnJhUlg0YktNb1Iza3Zneg==</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>dertester.de</Name>
+			<Comments>vraRX4bKMoR3kvgz</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ftp.drivingtheoryuk.co.uk</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>webexpert@drivingtheoryuk.co.uk</User>
+			<Pass encoding="base64">SW5mb0A5MTc5</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>driving4theory</Name>
+			<Comments>webexpert987@gmail.com
+sudhawebexpert
+
+admin@drivingtheoryuk.co.uk
+HHjjjdmm&amp;88d76TTyggh&amp;**(Oo
+
+webexpert987@gmail.com
+efficacy@ghaslate@987!@#
+
+927245
+here are the login credentials for the module two target site:
+1. Portal: https://www.drivingtheory4all.co.uk/login
+2. Email Address arischristofis14@gmail.com
+3. Password: arischristofis
+For my site, you can log in with the details below:
+Website: https://drivingtheoryuk.co.uk
+Username: webexpert987@gmail.com
+Password: sudhawebexpert
+</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>60.204.204.15</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>root</User>
+			<Pass encoding="base64">RmVsaXgyMDI0IQ==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>FELIX RUDI</Name>
+			<Comments>60.204.204.15
+root
+Felix2024!
+</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>gartenbau-versicherung.de</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>developer</User>
+			<Pass encoding="base64">MUIyamRwNT82Iw==</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>gartenbau-versicherung.de||Gabrial|kartik</Name>
+			<Comments>https://562.cluster-nbg1.de:8443/
+id: developer
+pw: 1B2jdp5?6#
+
+FTP
+Username :- developer/1B2jdp5?6#
+
+admin login
+fr.gartenbau-versicherung.de
+Username: wolfdev
+Password: MuwUCrntkTbGdNEMdpIu9C1c</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>intelligentvoice.com</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>webexpert@intelligentvoice.com</User>
+			<Pass encoding="base64">d2ViZXhwZXJ0QGludGVsbGlnZW50dm9pY2UuY29t</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>intelligentvoice Zendesk</Name>
+			<Comments>Hostname: intelligentvoice.com
+Username: webexpert@intelligentvoice.com
+Password: webexpert@intelligentvoice.com
+Port: 21</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>sites01.sites.onyx.io</Host>
+			<Port>39411</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>webuser</User>
+			<Pass encoding="base64">Q3RFcFpBWERZZWJqNEJVQVEybHk=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>iq-stageiq-BEN-sachine</Name>
+			<Comments>BEN SFTP DETAILS
+Hostname: 
+sites01.sites.onyx.io
+
+Port: 39411
+
+Username: webuser
+
+Password: CtEpZAXDYebj4BUAQ2ly
+
+
+WP ADMIN LOGIN
+
+portal.onyx.io/login
+
+webexpert987@gmail.com
+e
+fficacy@ghaslate@987!@#
+
+
+Page url:
+https://iq-stageiq-magnet-staging-2.onyx-sites.io/jobs-duplicate/
+</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>35.198.155.162</Host>
+			<Port>51301</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>kapioeuec2-user</User>
+			<Keyfile>D:\xampp\htdocs\parmalink\wordpress-uat.ppk</Keyfile>
+			<Logontype>5</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>kapio</Name>
+			<Comments>FTP ACCESS - https://gruendermotor.io/
+Host: 35.246.186.255
+User: gruendermotor
+Pass: VWurXxg6LWq5aHo
+Port: 30826
+
+ec2-user
+
+Contract URL : https://www.upwork.com/nx/wm/workroom/32841114/overview
+
+http://54.229.76.69/wp-admin/
+Username : webexpert987@gmail.com
+Password :  0U(h0CGMbNV)6bCRTk%MqaTY
+
+Previous site - 
+https://sasria.fundanisa.com/wp-admin
+User: webexpert987@gmail.com
+Pass:  6S3$L4#APz8XrcS4t^p*TBK)  
+
+1- Fix permalinks issue
+2- Fix submit courses issue. 
+
+SSH access - 
+Public IP address: 54.229.76.69
+User Name : ec2-user</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>l7datacenter.ch</Host>
+			<Port>8443</Port>
+			<Protocol>5</Protocol>
+			<Logontype>0</Logontype>
+			<BypassProxy>0</BypassProxy>
+			<Name>kassenprofis.eu</Name>
+			<Comments>https://l7datacenter.ch:8443
+webexpert987@gmail.com
+efficacy@ghaslate@987!@#</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>78.47.49.19</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>webexpert</User>
+			<Pass encoding="base64">N0BCMzl6cTFs</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>layer7-solutions.de||Julian||sachin</Name>
+			<Comments>HOST 78.47.49.19
+PWD 7@B39zq1l
+Uname webexpert
+
+https://staging.layer7-solutions.de/
+admin
+admin@121!@#</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ftp.mariamarinam6.sg-host.com</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>webexpert@mariamarinam6.sg-host.com</User>
+			<Pass encoding="base64">aHB4JDZAMT9AYzIy</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>mariamarinam6 laravel | Rahul |</Name>
+			<Comments>REFFRENCE ➖: https://www.morphmarket.com/stores/nerd/
+FTP LOGIN INFORMATION
+username: webexpert@mariamarinam6.sg-host.com
+pass: hpx$6@1?@c22
+FTP hostname: usm2.siteground.biz
+Port: 21
+
+webexpert987@gmail.com
+efficacy@ghaslate@987!@#
+
+
+Admin link:
+http://mariamarinam6.sg-host.com/admin
+Admin ID: admin@gmail.com
+Admin Password: 1234
+Vendor
+user: web_testing@yopmail.com
+pass: web_testing@yopmail.com
+User
+user: user_testing@yopmail.com
+pass: user_testing@yopmail.com
+
+Website link:
+http://mariamarinam6.sg-host.com
+</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>usm2.siteground.biz</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>webexpert@mariamarinam6.sg-host.com</User>
+			<Pass encoding="base64">aHB4JDZAMT9AYzIy</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>mariamarinam6.sg-host.com|laravel|Maria | RAHUL</Name>
+			<Comments>FTP LOGIN INFORMATION
+username: webexpert@mariamarinam6.sg-host.com
+pass: hpx$6@1?@c22
+FTP hostname: usm2.siteground.biz
+Port: 21
+
+Admin link:
+http://mariamarinam6.sg-host.com/admin
+Admin ID: admin@gmail.com
+Admin Password: 1234
+
+Vendor
+user: web_testing@yopmail.com
+pass: web_testing@yopmail.com
+
+User
+user: user_testing@yopmail.com
+pass: user_testing@yopmail.com
+
+
+Website link:
+http://mariamarinam6.sg-host.com
+
+
+https://docs.google.com/document/d/1WCndD08J2S63UCYqoiYC5MXrSVeSR477Poj3q5ptsns/edit?hl=en&amp;forcehl=1</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>51.79.20.195</Host>
+			<Port>21</Port>
+			<Protocol>6</Protocol>
+			<Type>0</Type>
+			<User>marketingblends</User>
+			<Pass encoding="base64">ZUhXdmRGez9Kbm9y</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>marketing</Name>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>162.254.117.31</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>ftpmtm2@meetthemasters.com</User>
+			<Pass encoding="base64">SXpoMFl6QUV6dTR5</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>meetthemasters|PPC-seo-Nirmalsir</Name>
+			<Comments>Here are the FTP credentials shared by client
+
+Host : 162.254.117.31
+username: ftpmtm2@meetthemasters.com
+Password: Izh0YzAEzu4y
+port : 21
+
+Thank you! 
+
+WordPress Access:
+
+URL: https://meetthemasters.com/wp-login.php
+Username: pashmina
+Password: WK^u46xm@zlR6bY*&amp;T4gaOmg</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ftp.mikepromedia.com</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>dev5@actualreview.net</User>
+			<Pass encoding="base64">OCNKNUs4dEw=</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>mikepromedia</Name>
+			<Comments>FTP Username: dev5@actualreview.net
+FTP Server: ftp.mikepromedia.com
+FTP &amp; explicit FTPS port: 21</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>new.evenset.com</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>ftpuser</User>
+			<Pass encoding="base64">VDNGMkNpUUswQ2xhTndFa2JHZENRek9MYlQ2R2E2SUxIZmlDanRCYjlxSENZSEpzNHVWekc3RUM0Y3BsSjNVNA==</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>New.evenset.com</Name>
+			<Comments>Host: new.evenset.com (or 3.98.215.192)
+Username: ftpuser
+Password: T3F2CiQK0ClaNwEkbGdCQzOLbT6Ga6ILHfiCjtBb9qHCYHJs4uVzG7EC4cplJ3U4
+Port: 21</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>35.242.179.138</Host>
+			<Port>13140</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>oxyplants</User>
+			<Pass encoding="base64">ZnB5SVRTWWZrVmVyWmoy</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>oxy-live|john|jitendra</Name>
+			<Comments>host 35.242.179.138
+Port 13140
+u oxyplants
+p fpyITSYfkVerZj2</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>35.242.179.138</Host>
+			<Port>31527</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>oxyplants</User>
+			<Pass encoding="base64">OFcwdzhyYzdhYTIwUG9I</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>oxyplants-staging.kinsta.cloud|john mary |jitendra</Name>
+			<Comments>35.242.179.138
+prt 31527
+u oxyplants
+p 8W0w8rc7aa20PoH</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>54.220.230.121</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>ec2-user</User>
+			<Keyfile>D:\xampp\htdocs\parmalink\wordpress-uat.ppk</Keyfile>
+			<Logontype>5</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>parmalink</Name>
+			<Comments>
+http://54.229.76.69/wp-admin/
+Username : webexpert987@gmail.com
+Password :  0U(h0CGMbNV)6bCRTk%MqaTY
+
+Previous site - 
+https://sasria.fundanisa.com/wp-admin
+User: webexpert987@gmail.com
+Pass:  6S3$L4#APz8XrcS4t^p*TBK)  
+
+1- Fix permalinks issue
+2- Fix submit courses issue. 
+54.220.230.121
+SSH access - 
+Public IP address: 54.229.76.69
+User Name : ec2-user
+Key attached </Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>87.106.236.102</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>root</User>
+			<Pass encoding="base64">aiF1MlhBJnYqTQ==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>pensive-zhukovsky| ROSA | SACHIN</Name>
+			<Comments>Pre-Production Hosting
+87.106.236.102
+user: root
+pass: j!u2XA&amp;v*M
+/var/www/vhosts/pensive-zhukovsky.87-106-236-102.plesk.page/httpdocs
+WordPress
+Login: https://pensive-zhukovsky.87-106-236-102.plesk.page/wp-login.php
+User: adtest
+Pass: TrEZrh%Jq@iY)*wSyf$3KuN</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ssh.railcoin.uk</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>railcoin.uk</User>
+			<Pass encoding="base64">V2ViQGV4cGVydDEyMw==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>railcoin_sudha_mark_pope</Name>
+			<Comments>To log in with SFTP, use this info:
+Host: ssh.railcoin.uk
+Username: railcoin.uk
+Port: 22
+pwd : Web@expert123</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>49.12.33.216</Host>
+			<Port>3241</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>bv_sftp_user</User>
+			<Pass encoding="base64">ZjA0Y2RmMTRiMmY2NzAwMg==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>rosa -sachine - Gmap</Name>
+			<Comments>
+https://87-106-236-102-plesk453.e.wpstage.net/
+blogvault
+2636ea7f  
+
+Admin
+User: adtest
+Pass: TrEZrh%Jq@iY)*wSyf$3KuN
+
+SFTP DETAILS
+49.12.33.216
+bv_sftp_user
+f04cdf14b2f67002
+3241
+
+banibek985@chnlog.com</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>87.106.236.102</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>root</User>
+			<Pass encoding="base64">aiF1MlhBJnYqTQ==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>Rosa | Sachin</Name>
+			<Comments>Pre-Production Hosting
+87.106.236.102
+user: root
+pass: j!u2XA&amp;v*M
+/var/www/vhosts/pensive-zhukovsky.87-106-236-102.plesk.page/httpdocs
+WordPress
+Login: https://pensive-zhukovsky.87-106-236-102.plesk.page/wp-login.php
+User: adtest
+Pass: TrEZrh%Jq@iY)*wSyf$3KuN</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>172.25.0.1</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>rosaperez</User>
+			<Pass encoding="base64">UmUxODE3MmQ5YzlkZTQyOTlhYjllYzI0YjFiZWVmMDFhIw==</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>rosaperez</Name>
+			<Comments>FTP
+172.25.0.1
+user: rosaperez
+pass: Re18172d9c9de4299ab9ec24b1beef01a#
+
+
+Champagnat-&gt;2022!*</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>s1v.9d0.myftpupload.com</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>kRpIkiWG7x28yH</User>
+			<Pass encoding="base64">cGpaV0JTUmxnb2o1T3I=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>s1v.9d0.myftpupload.com | louse -pranjal</Name>
+			<Comments>You: https://s1v.9d0.myftpupload.com/
+s1v.9d0.myftpupload.com
+
+kRpIkiWG7x28yH
+
+pjZWBSRlgoj5Or
+
+Port: 22
+</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>sftp.wp.com</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>ceoeventmanagement.wordpress.com</User>
+			<Pass encoding="base64">czFFVDhQNDJHT0xrTmVxVEg5b3E=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>SEO|live|maddie|dolly</Name>
+			<Comments>https://ceoeventmanagement.wpcomstaging.com/
+
+PORT :- sftp.wp.com
+username :- ceoeventmanagement.wordpress.com
+paasword :- s1ET8P42GOLkNeqTH9oq</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>sftp.wp.com</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>staging-efd1-ceoeventmanagement.wordpress.com</User>
+			<Pass encoding="base64">c2RTYjBPUm9yNUx6VU12dDZGWlE=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>seo|medd|dolly</Name>
+			<Comments>host sftp.wp.com
+port 22 
+username :- staging-efd1-ceoeventmanagement.wordpress.com
+password : sdSb0ORor5LzUMvt6FZQ</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>sftp.wp.com</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>tbouco.wordpress.com</User>
+			<Pass encoding="base64">VXpZbm9oR1kySEREaEpHb0RaRlM=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>sftp.wp.com | Jemia |</Name>
+			<Comments>sftp.wp.com
+tbouco.wordpress.com
+UzYnohGY2HDDhJGoDZFS
+Port: 22</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>649969e22d.nxcli.io</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>ae4ff33b_3</User>
+			<Pass encoding="base64">Qm9venlQaW5zTWFpZGVuTnVicw==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>sfy_staging|Adamjeckson|aman</Name>
+			<Comments>https://649969e22d.nxcli.io
+
+
+WP-Admin login :743ce615ed.nxcli.io/wp-admin
+Username :- Upwork
+Password :- FG%Xt%4sf1wVDi^qYG)8QOx2
+SFTP
+Hostname	
+649969e22d.nxcli.io
+
+Port	
+22
+
+Username	
+ae4ff33b_3
+
+Your Password is:
+BoozyPinsMaidenNubs
+
+
+Password: RivenDopesGrudgePinkie
+</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>f2a6154c81.nxcli.net</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>a8ad92e9_3</User>
+			<Pass encoding="base64">VmVuZExhYkhlZGdlUmVkb2Vz</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>sfy||AMAN|ADAm jekson</Name>
+			<Comments>https://www.sfy.org.uk/wp-admin
+Upwork
+FG%Xt%4sf1wVDi^qYG)8QOx2
+
+SFTP live 
+Host: f2a6154c81.nxcli.net
+Port: 22
+Username: a8ad92e9_3
+Password:  VendLabHedgeRedoes</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>35.198.155.162</Host>
+			<Port>51301</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>kapioeu</User>
+			<Pass encoding="base64">eXE3bkxwWFBiblpxc3d1</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>staging-kapioeu-dev</Name>
+			<Comments>"host": "35.198.155.162",
+"username": "kapioeu",
+"password": "yq7nLpXPbnZqswu",
+"port": 51301,
+
+Website + Userdata
+https://staging-kapioeu-dev.kinsta.cloud/
+webexpert987@gmail.com
+^Lf7ncq!sMZ%xlnd*1BOL)mV
+
+Test-Site (Site with Shortcode)
+https://staging-kapioeu-dev.kinsta.cloud/account/nutzer-verwalten/
+
+
+Harvest login-----
+Martin Miersch36 minutes ago
+martin.miersch@kapio.eu
+9L&amp;h8$rGeSJcGX
+Login Harvest
+
+"host": "35.198.155.162",
+"username": "kapioeu",
+"password": "yq7nLpXPbnZqswu",
+"port": 51301,
+
+Website + Userdata
+https://staging-kapioeu-dev.kinsta.cloud/
+webexpert987@gmail.com
+^Lf7ncq!sMZ%xlnd*1BOL)mV
+
+Test-Site (Site with Shortcode)
+https://staging-kapioeu-dev.kinsta.cloud/account/nutzer-verwalten/
+
+
+Harvest login-----
+Martin Miersch36 minutes ago
+martin.miersch@kapio.eu
+9L&amp;h8$rGeSJcGX
+Login Harvest</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>steche74.dream.press</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>wp_ui3gm5</User>
+			<Pass encoding="base64">bUVhaGJMIVU=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>steche74 zakari</Name>
+			<Comments>SFTP:
+Host: steche74.dream.press
+Port 22
+Username: wp_ui3gm5
+Password: mEahbL!U</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>z86.578.myftpupload.com</Host>
+			<Port>21</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>xyz@tempermechanical.com</User>
+			<Pass encoding="base64">VGVzdDMyMSQ=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>tempermechanical.com</Name>
+			<Comments>NEW SFTP :
+z86.578.myftpupload.com
+22
+User:z86542901965058
+L_p5f+OwoY.
+
+OLD:
+FTP Username: xyz@tempermechanical.com
+FTP server: ftp.tempermechanical.com
+FTP &amp; explicit FTPS port:  21</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ein-stein-fuer-einstein.de</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>staging27@ein-stein-fuer-einstein.de</User>
+			<Pass encoding="base64">cU5xVVRIWDJ3bWFhNU04</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>Thomas Kresser |einstein| Pranjal</Name>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ein-stein-fuer-einstein.de</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>staging30@ein-stein-fuer-einstein.de</User>
+			<Pass encoding="base64">cU5xVVRIWDJ3bWFhNU04</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>Thomasfresser|pranjal| new einstein Staging@SiteGround</Name>
+			<Comments>https://staging30.ein-stein-fuer-einstein.de/wp-admin/
+
+admin_upwork
+
+krad3Cpd!F&amp;yiTb^(eW43QMb
+</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ssh.trimnellshouse.com</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>trimnellshouse.com</User>
+			<Pass encoding="base64">cGFya2lwb3N0</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>trimnellshouse||Sudha||MarkPope</Name>
+			<Comments>To log in with SSH &amp; SFTP, use this info:
+
+Host: ssh.trimnellshouse.com
+
+Username: trimnellshouse.com
+
+Port: 22
+
+SSH/SFTP password.:- parkipost
+
+FTP Password : Stay@123</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ubl.a91.myftpupload.com</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>qdznMlHqaMPYrq</User>
+			<Pass encoding="base64">U1VWRlV6THFLQDZHdnY=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>ubl.a91.myftpupload.com|BO|Kartik</Name>
+			<Comments>ubl.a91.myftpupload.com
+H: ubl.a91.myftpupload.com
+U: qdznMlHqaMPYrq
+P: SUVFUzLqK@6Gvv
+P: 22
+
+
+Admin Login
+boparker
+Hogghogg5!
+</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ftp.urs.online</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>webexpert987@urs.online</User>
+			<Pass encoding="base64">ZWZmaWNhY3lAZ2hhc2xhdGVAOTg3IUAj</Pass>
+			<Logontype>1</Logontype>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>urs new live laravel ftp.urs.online</Name>
+			<Comments>Hostname: ftp.urs.online
+
+Username: webexpert987@urs.online
+
+Password: The one you set up for this account
+
+Port: 21
+
+efficacy@ghaslate@987!@#</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>ftp.s963.upress.link</Host>
+			<Port>21</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>dev@youhoo.co.il</User>
+			<Pass encoding="base64">NSVyVlY1LTJaQS0=</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>youhoo.co.il</Name>
+			<Comments>ftp.s963.upress.link
+port 21
+
+dev@youhoo.co.il
+5%rVV5-2ZA-</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+		<Server>
+			<Host>49.12.33.216</Host>
+			<Port>1794</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>bv_sftp_user</User>
+			<Pass encoding="base64">MGNiZDk3ODhkYTkzMTE0ZA==</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>youhoo.co.il |Ron| kartik</Name>
+			<Comments>H: 49.12.33.216
+U: bv_sftp_user
+P: 0cbd9788da93114d
+1794</Comments>
+			<SyncBrowsing>0</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+	</Servers>
+	<Settings>
+		<Setting name="Use Pasv mode">1</Setting>
+		<Setting name="Limit local ports">0</Setting>
+		<Setting name="Limit ports low">6000</Setting>
+		<Setting name="Limit ports high">7000</Setting>
+		<Setting name="Limit ports offset">0</Setting>
+		<Setting name="External IP mode">0</Setting>
+		<Setting name="External IP" />
+		<Setting name="External address resolver">http://ip.filezilla-project.org/ip.php</Setting>
+		<Setting name="Last resolved IP" />
+		<Setting name="No external ip on local conn">1</Setting>
+		<Setting name="Pasv reply fallback mode">0</Setting>
+		<Setting name="Timeout">20</Setting>
+		<Setting name="Logging Debug Level">0</Setting>
+		<Setting name="Logging Raw Listing">0</Setting>
+		<Setting name="Allow transfermode fallback">1</Setting>
+		<Setting name="Reconnect count">2</Setting>
+		<Setting name="Reconnect delay">5</Setting>
+		<Setting name="Enable speed limits">0</Setting>
+		<Setting name="Speedlimit inbound">1000</Setting>
+		<Setting name="Speedlimit outbound">100</Setting>
+		<Setting name="Speedlimit burst tolerance">0</Setting>
+		<Setting name="Preallocate space">0</Setting>
+		<Setting name="View hidden files">0</Setting>
+		<Setting name="Preserve timestamps">0</Setting>
+		<Setting name="Socket recv buffer size (v2)">4194304</Setting>
+		<Setting name="Socket send buffer size (v2)">262144</Setting>
+		<Setting name="FTP Keep-alive commands">0</Setting>
+		<Setting name="FTP Proxy type">0</Setting>
+		<Setting name="FTP Proxy host" />
+		<Setting name="FTP Proxy user" />
+		<Setting name="FTP Proxy password" />
+		<Setting name="FTP Proxy login sequence" />
+		<Setting name="SFTP keyfiles" platform="win" />
+		<Setting name="SFTP compression">0</Setting>
+		<Setting name="Proxy type">0</Setting>
+		<Setting name="Proxy host" />
+		<Setting name="Proxy port">0</Setting>
+		<Setting name="Proxy user" />
+		<Setting name="Proxy password" />
+		<Setting name="Logging file" platform="win" />
+		<Setting name="Logging filesize limit">10</Setting>
+		<Setting name="Size format">0</Setting>
+		<Setting name="Size thousands separator">1</Setting>
+		<Setting name="Size decimal places">1</Setting>
+		<Setting name="TCP Keepalive Interval">15</Setting>
+		<Setting name="Cache TTL">600</Setting>
+		<Setting name="Minimum TLS Version">2</Setting>
+		<Setting name="Directory listing item limit">10000000</Setting>
+		<Setting name="Update Check">1</Setting>
+		<Setting name="Update Check Interval">7</Setting>
+		<Setting name="Update Check Check Beta">0</Setting>
+		<Setting name="Kiosk mode">0</Setting>
+		<Setting name="Master password encryptor" />
+		<Setting name="Trust system trust store">0</Setting>
+		<Setting name="Ascii Binary mode">0</Setting>
+		<Setting name="Auto Ascii files">ac|am|asp|bat|c|cfm|cgi|conf|cpp|css|dhtml|diff|diz|h|hpp|htm|html|in|inc|java|js|jsp|lua|m4|mak|md5|nfo|nsh|nsi|pas|patch|pem|php|phtml|pl|po|pot|py|qmail|sh|sha1|sha256|sha512|shtml|sql|svg|tcl|tpl|txt|vbs|xhtml|xml|xrc</Setting>
+		<Setting name="Auto Ascii no extension">1</Setting>
+		<Setting name="Auto Ascii dotfiles">1</Setting>
+		<Setting name="Comparison threshold">1</Setting>
+		<Setting name="Cache directory" platform="win" />
+		<Setting name="Number of Transfers">2</Setting>
+		<Setting name="Language Code" />
+		<Setting name="Concurrent download limit">0</Setting>
+		<Setting name="Concurrent upload limit">0</Setting>
+		<Setting name="Show debug menu">0</Setting>
+		<Setting name="File exists action download">0</Setting>
+		<Setting name="File exists action upload">0</Setting>
+		<Setting name="Allow ascii resume">0</Setting>
+		<Setting name="Greeting resources" />
+		<Setting name="Onetime Dialogs" />
+		<Setting name="Show Tree Local">1</Setting>
+		<Setting name="Show Tree Remote">1</Setting>
+		<Setting name="File Pane Layout">0</Setting>
+		<Setting name="File Pane Swap">0</Setting>
+		<Setting name="Filelist directory sort">0</Setting>
+		<Setting name="Filelist name sort">0</Setting>
+		<Setting name="Queue successful autoclear">0</Setting>
+		<Setting name="Show message log">1</Setting>
+		<Setting name="Show queue">1</Setting>
+		<Setting name="Default editor" platform="win" />
+		<Setting name="Always use default editor">0</Setting>
+		<Setting name="Comparison mode">1</Setting>
+		<Setting name="Icon theme">default</Setting>
+		<Setting name="Icon scale">125</Setting>
+		<Setting name="Timestamp in message log">0</Setting>
+		<Setting name="Filelist status bar">1</Setting>
+		<Setting name="Filter toggle state">0</Setting>
+		<Setting name="Show quickconnect bar">1</Setting>
+		<Setting name="Messagelog position">0</Setting>
+		<Setting name="File doubleclick action">0</Setting>
+		<Setting name="Dir doubleclick action">0</Setting>
+		<Setting name="Minimize to tray">0</Setting>
+		<Setting name="Search column widths" />
+		<Setting name="Search column shown" />
+		<Setting name="Search column order" />
+		<Setting name="Search window size" />
+		<Setting name="Comparison hide identical">0</Setting>
+		<Setting name="Search sort order" />
+		<Setting name="Edit track local">1</Setting>
+		<Setting name="Prevent idle sleep">1</Setting>
+		<Setting name="Filteredit window size" />
+		<Setting name="Enable invalid char filter">1</Setting>
+		<Setting name="Invalid char replace">_</Setting>
+		<Setting name="Display current speed">0</Setting>
+		<Setting name="Toolbar hidden">0</Setting>
+		<Setting name="Strip VMS revisions">0</Setting>
+		<Setting name="Startup action">0</Setting>
+		<Setting name="Queue completion action">1</Setting>
+		<Setting name="Queue completion command" />
+		<Setting name="Drag and Drop disabled">0</Setting>
+		<Setting name="Disable update footer">0</Setting>
+		<Setting name="Highest shown overlay id">0</Setting>
+		<Setting name="Greeting version">3.67.1</Setting>
+		<Setting name="Last automatic update version">3.67.1</Setting>
+		<Setting name="Local filelist shown columns">1111</Setting>
+		<Setting name="Remote filelist shown columns">111111</Setting>
+		<Setting name="Local filelist column order">0,1,2,3</Setting>
+		<Setting name="Remote filelist column order">0,1,2,3,4,5</Setting>
+		<Setting name="Time Format">0</Setting>
+		<Setting name="Date Format">0</Setting>
+		<Setting name="Already connected choice">2</Setting>
+		<Setting name="Edit status dialog size">0 332 201 599 354 </Setting>
+		<Setting name="Prompt password save">0</Setting>
+		<Setting name="Persistent Choices">1</Setting>
+		<Setting name="Queue column widths">180 60 180 80 60 150</Setting>
+		<Setting name="Local filelist colwidths">170 80 120 120</Setting>
+		<Setting name="Local filelist sortorder">0 0</Setting>
+		<Setting name="Window position and size">1 -7 3 1020 623 </Setting>
+		<Setting name="Splitter positions (v2)">97 -131 500000000 147 150 500000000</Setting>
+		<Setting name="Site Manager position">0 441 228 1022 545 </Setting>
+		<Setting name="Remote filelist colwidths">464 93 80 100 80 85</Setting>
+		<Setting name="File associations (v2)" platform="win">php "C:\Users\India Infotech\AppData\Local\Programs\Microsoft VS Code\Code.exe" %f
+txt C:\Windows\system32\NOTEPAD.EXE %f</Setting>
+		<Setting name="Remote filelist sortorder">1 0</Setting>
+		<Setting name="Sitemanager last selected">0/oxy-live|john|jitendra</Setting>
+		<Setting name="Tab data" sensitive="1">
+			<Tabs>
+				<Tab connected="1" selected="1">
+					<Host>35.242.179.138</Host>
+					<Port>13140</Port>
+					<Protocol>1</Protocol>
+					<Type>0</Type>
+					<User>oxyplants</User>
+					<Pass encoding="base64">ZnB5SVRTWWZrVmVyWmoy</Pass>
+					<Logontype>1</Logontype>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>oxy-live|john|jitendra</Name>
+					<Site>0/oxy-live|john|jitendra</Site>
+					<RemotePath>1 0 3 www 13 oxyplants_928 6 public 10 wp-content 7 plugins 21 widget-google-reviews 8 includes</RemotePath>
+					<LocalPath>D:\xampp\htdocs\oxy\</LocalPath>
+				</Tab>
+			</Tabs>
+		</Setting>
+		<Setting name="Last automatic update check">2024-11-18 10:48:00</Setting>
+		<Setting name="Update Check New Version" platform="win">nightly 2024-11-16 https://filezilla-project.org/nightlies/2024-11-16/win64/FileZilla_3_setup.exe 12454368 sha512 d88a244813e71b926b3a482986a645bd146606f5d5580753b7b41ec6a2d60f65e57425967579a9fad981d36f90826b2dbfbed3d0ba628334847f1596cb622494 sig:p2Ljbb9F9jDZuisxv1Ytit3affcn8Oom031JNpRML5RQax2e5y/eYbet6pm52Vb8sde3PCpF07Xmv4icuNNhAA
+release 3.67.0 https://dl2.cdn.filezilla-project.org/FileZilla_3.67.0_win64-setup.exe 12388016 sha512 3437a7cb6f256fdb74344b257ff44c3e4ee713c5fb4368f54a3ae2816148d0bd2a2aa1cab3572fd044c9ee05774515776774668ad64f41b70d9dc33c26de754f sig:kn6RZR8Pd8PSB7SS3PG41uhuRQrCPVuc0apZip3MKQdkI5/wIXo1nkMY+RHY9ULPiC+4A46gnhIiwre/dctoBg
+</Setting>
+	</Settings>
+</FileZilla3>

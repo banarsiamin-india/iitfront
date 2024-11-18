@@ -8,6 +8,8 @@ const UserForm = ({ user, onUserSaved, onClose }) => {
   const [form, setForm] = useState({ name: '', email: '', phone: '', password: '', roles: '' });
   const [roles, setRoles] = useState([]);
   const [error, setError] = useState('');
+  const [errorp, setErrorp] = useState(''); // Phone error
+  const [errore, setErrore] = useState(''); // Email error
 
   useEffect(() => {
     const fetchRoles = async () => {
@@ -32,11 +34,29 @@ const UserForm = ({ user, onUserSaved, onClose }) => {
   }, [user, token]);
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    if (name === 'phone') {
+      validatePhone(value);
+    }
+
+    if (name === 'email') {
+      validateEmail(value);
+    }
+
+    setForm({ ...form, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Ensure the phone and email are valid before submission
+    if (errorp || errore) {
+      //alert('Please fix validation errors before submitting.');
+      setError('Please fix validation errors before submitting.');
+
+      return;
+    }
 
     try {
       let response;
@@ -52,7 +72,24 @@ const UserForm = ({ user, onUserSaved, onClose }) => {
     } catch (error) {
       console.error(error);
       setError(error.response?.data?.message || 'Failed to save user');
-      // alert('Failed to save user.');
+    }
+  };
+
+  const validatePhone = (value) => {
+    const phoneRegex = /^[0-9]{10}$/; // Adjust for your requirements
+    if (!phoneRegex.test(value)) {
+      setErrorp('Phone number must be exactly 10 digits.');
+    } else {
+      setErrorp('');
+    }
+  };
+
+  const validateEmail = (value) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email regex
+    if (!emailRegex.test(value)) {
+      setErrore('Please enter a valid email address.');
+    } else {
+      setErrore('');
     }
   };
 
@@ -72,24 +109,26 @@ const UserForm = ({ user, onUserSaved, onClose }) => {
       <div className="mb-3">
         <label className="form-label">Email</label>
         <input
-          className="form-control"
+          className={`form-control ${errore ? 'is-invalid' : ''}`}
           name="email"
           placeholder="Email"
           value={form.email}
           onChange={handleChange}
           required
         />
+        {errore && <div className="invalid-feedback">{errore}</div>}
       </div>
       <div className="mb-3">
         <label className="form-label">Phone</label>
         <input
-          className="form-control"
+          className={`form-control ${errorp ? 'is-invalid' : ''}`}
           name="phone"
           placeholder="Phone"
           value={form.phone}
           onChange={handleChange}
           required
         />
+        {errorp && <div className="invalid-feedback">{errorp}</div>}
       </div>
       <div className="mb-3">
         <label className="form-label">Password</label>
@@ -111,7 +150,9 @@ const UserForm = ({ user, onUserSaved, onClose }) => {
           onChange={handleChange}
           required
         >
-          <option value="" disabled>Select a role</option>
+          <option value="" disabled>
+            Select a role
+          </option>
           {roles.map((role) => (
             <option key={role._id} value={role._id}>
               {role.name}

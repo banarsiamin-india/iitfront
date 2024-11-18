@@ -4,11 +4,9 @@ import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { getSkills } from '../api/skillApi';
 
-
 const ProfileUpdate = () => {
   const navigate = useNavigate();
-  const { user, dispatch,token } = useContext(AuthContext);
-  // console.log(user, dispatch); // Check if they are defined
+  const { user, dispatch, token } = useContext(AuthContext);
   const [name, setName] = useState(user?.user?.name || '');
   const [phone, setPhone] = useState(user?.user?.phone || '1234567890');
   const [skillss, setSkillss] = useState([]);
@@ -17,8 +15,9 @@ const ProfileUpdate = () => {
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(user?.user?.image || ''); // Existing image from the user profile
   const [error, setError] = useState('');
+  const [errorp, setErrorp] = useState(''); // Phone validation error
+  const [errore, setErrore] = useState(''); // Email validation error
 
-  // Fetch user data (optional, if not provided by context)
   useEffect(() => {
     // Fetch skills once
     const fetchSkills = async () => {
@@ -30,7 +29,7 @@ const ProfileUpdate = () => {
       }
     };
     fetchSkills();
-  }, [user,token]);
+  }, [user, token]);
 
   useEffect(() => {
     if (token) {
@@ -40,9 +39,8 @@ const ProfileUpdate = () => {
       setSkls(user.user.skills);
       setPreview(`${process.env.REACT_APP_API_URL}uploads/${user.user.image}`); // Assume server image path is returned with user data
     }
-  }, [user,token]);
+  }, [user, token]);
 
-  // Handle image change
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
@@ -63,11 +61,18 @@ const ProfileUpdate = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+      // Ensure the phone and email are valid before submission
+      if (errorp || errore) {
+        //alert('Please fix validation errors before submitting.');
+        setError('Please fix validation errors before submitting.');
+  
+        return;
+      }
+      
     const formData = new FormData();
     formData.append('name', name);
     formData.append('phone', phone);
     formData.append('email', email);
-    // formData.append('skills', skls);
     formData.append('skills', JSON.stringify(skls)); // Convert to JSON if sending as array
 
     if (image) {
@@ -81,14 +86,10 @@ const ProfileUpdate = () => {
           Authorization: `Bearer ${user.token}`,
         },
       });
-      console.log("aminkhan ",data);
       // Update user in local storage and context
       if (dispatch) {
         localStorage.setItem('user', JSON.stringify(data));
         dispatch({ type: 'LOGIN', payload: data });
-        console.error('Dispatch function is done');
-      } else {
-        console.error('Dispatch function is not defined');
       }
 
       // Update the preview with the new uploaded image from server response
@@ -104,6 +105,36 @@ const ProfileUpdate = () => {
     }
   };
 
+  const validatePhone = (value) => {
+    const phoneRegex = /^[0-9]{10}$/; // Validate exactly 10 digits
+    if (!phoneRegex.test(value)) {
+      setErrorp('Phone number must be exactly 10 digits.');
+    } else {
+      setErrorp('');
+    }
+  };
+
+  const validateEmail = (value) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format validation
+    if (!emailRegex.test(value)) {
+      setErrore('Please enter a valid email address.');
+    } else {
+      setErrore('');
+    }
+  };
+
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    setPhone(value);
+    validatePhone(value);
+  };
+
+  const handleEmailChange = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    validateEmail(value);
+  };
+
   return (
     <div className="row justify-content-md-center">
       <div className="col-md-6">
@@ -113,47 +144,75 @@ const ProfileUpdate = () => {
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label">Name</label>
-            <input type="text" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+            <input
+              type="text"
+              className="form-control"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
           </div>
 
           <div className="mb-3">
             <label className="form-label">Phone</label>
-            <input type="text" className="form-control" value={phone} onChange={(e) => setPhone(e.target.value)} />
+            <input
+              type="number"
+              className={`form-control ${errorp ? 'is-invalid' : ''}`} // Add Bootstrap's is-invalid class for error styling
+              value={phone}
+              onChange={handlePhoneChange}
+              required
+            />
+            {errorp && <div className="invalid-feedback">{errorp}</div>}
           </div>
 
           <div className="mb-3">
             <label className="form-label">Skills</label>
-              <select
-                className="form-control"
-                name="skills"
-                multiple
-                onChange={handleSkillsChange}
-                value={skls} // Bind to the selected skills
-                required
-              >
-                {skillss.map((skill) => (
-                  <option key={skill._id} value={skill._id}>
-                    {skill.name}
-                  </option>
-                ))}
-              </select>
-
+            <select
+              className="form-control"
+              name="skills"
+              multiple
+              onChange={handleSkillsChange}
+              value={skls}
+              required
+            >
+              {skillss.map((skill) => (
+                <option key={skill._id} value={skill._id}>
+                  {skill.name}
+                </option>
+              ))}
+            </select>
           </div>
+
           <div className="mb-3">
             <label className="form-label">Email</label>
-            <input type="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="email"
+              className={`form-control ${errore ? 'is-invalid' : ''}`}
+              value={email}
+              onChange={handleEmailChange}
+            />
+            {errore && <div className="invalid-feedback">{errore}</div>}
           </div>
+
           <div className="mb-3">
             <label className="form-label">Profile Image</label>
-            <input type="file" className="form-control" accept="image/*" onChange={handleImageChange}
+            <input
+              type="file"
+              className="form-control"
+              accept="image/*"
+              onChange={handleImageChange}
             />
           </div>
           {preview && (
             <div className="mb-3">
-              <img src={preview} alt="Profile Preview" style={{ width: '150px', height: '150px', objectFit: 'cover' }}/>
+              <img
+                src={preview}
+                alt="Profile Preview"
+                style={{ width: '150px', height: '150px', objectFit: 'cover' }}
+              />
             </div>
           )}
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" disabled={errorp || errore}>
             Update Profile
           </button>
         </form>
